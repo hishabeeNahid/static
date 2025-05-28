@@ -1,0 +1,77 @@
+/* Hide header and navigation */
+                        img[alt="arogga logo"]{display: none !important;}
+                        a[aria-label="Chat with us on Messenger"]{display: none !important;}
+
+                        .viewRendererContainer:nth-child(1){
+                        	display: none !important;
+                        }
+                        .viewRendererContainer:nth-child(2){
+                        	display: none !important;
+                        }
+                        .viewRendererContainer:nth-child(3){
+                        	display: none !important;
+                        }
+                       
+                        div[class*="footer_menu_wrap"] a:not(:last-child){
+	                        display: none !important;
+                          }
+                        div[class*="footer_menu_wrap"]> a:last-child{
+	                        position: absolute !important;
+	                        bottom: 40px !important;
+	                        right: 20px !important;
+	                        height: 60px;
+	                        width: 60px;
+	                        border-radius: 100%;
+	                        background: white;
+	                        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                          }
+                          
+                        [class*="category_cat_wrap"]
+                        {
+                            display: none !important;
+                        }
+                        [class*="header_logo_wrap"] a:last-child
+                        {
+                            display: none !important;
+                        }
+                   
+                        nav {
+                            height : auto !important;
+                        }
+                        
+                        div[class*="header_bottom"] {
+	                        padding-top: 30px !important;
+                        }
+                        div[class*="shopping-cart-tab_shopping-cart-tab"] {
+	                        display: none !important;
+                           }
+                           
+                        div[class*="footer_menu_wrap"]> a:last-child span span svg {
+                           	position: relative;
+                             right: 0px !important;
+                             top: 18px !important;
+                           	z-index: 2333 !important;
+                           }
+                        div[class*="footer_menu_wrap"]> a:last-child  {
+                           	color: transparent !important;
+                           	font-size: 10px !important;
+                           }
+                        
+                        /* Adjust body and main content */
+                        body {
+                            padding-top: 0 !important;
+                            margin-top: 0 !important;
+                        }
+                        
+                        .main-content,
+                        .content-wrapper,
+                        main {
+                            margin-top: 0 !important;
+                            padding-top: 10px !important;
+                        }
+                        
+                        /* Ensure the product grid starts from top */
+                        .product-grid,
+                        .products-container {
+                            margin-top: 0 !important;
+                        }
