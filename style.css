@@ -1,4 +1,5 @@
 javascript:(function() {
+            
                 function addCustomStyles() {
                     var css = `
                         /* Hide header and navigation */
@@ -29,7 +30,8 @@ javascript:(function() {
 	                        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
                           }
                           
-                        [class*="category_cat_wrap"]
+                        [class*="category_cat_wrap"],
+                        [class*="style_social_login_wrapper"]
                         {
                             display: none !important;
                         }
@@ -86,6 +88,17 @@ javascript:(function() {
                     
                 }
                 
+                window.isSubscribed = function(data){
+                    console.log('subs nai', data);
+                    if(data){
+                        window.open('https://m.arogga.com/shopping-cart'); 
+                    }else{
+                        console.log('subs nai', data);
+                   
+                    }
+                    
+                }
+                
                 function addCustomScript() {
                    
                     var code = `
@@ -106,6 +119,17 @@ javascript:(function() {
                         el_ex2.innerHTML = '<span style="padding:6px;" onclick="window?.AndroidInterface?.goBack()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1F2937"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"></path></svg></span>'
                         clearInterval(interval2);
                         
+                      }
+                    }, 1000);
+                    
+                    const interval4 = setInterval(() => {
+                      var button = document.querySelector('a[href="/shopping-cart"]')
+                      if (button) {
+                        button.addEventListener('click', function(e){
+                            event.preventDefault();
+                            window?.AndroidInterface.subscriptionCheck();
+                        })
+                        clearInterval(interval4);
                       }
                     }, 1000);
                        
